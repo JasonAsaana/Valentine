@@ -157,12 +157,14 @@
     const yesBtn = document.getElementById("yesBtn");
     const message = document.getElementById("message");
     const gallery = document.querySelector(".gallery");
+    const question = document.querySelector(".question");
 
 
     noBtn.addEventListener("click", moveButton);
     noBtn.addEventListener("touchstart", moveButton);
 
     function moveButton() {
+      alert("Herrr be serious 🤨");
       const buttonRect = noBtn.getBoundingClientRect();
 
       const maxX = window.innerWidth - buttonRect.width;
@@ -183,6 +185,7 @@
       message.style.display = "block";
       yesBtn.style.display = "none";
       noBtn.style.display = "none";
+      question.style.display = "none";
       startHearts();
     });
 
