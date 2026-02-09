@@ -163,15 +163,14 @@
 
     function moveButton() {
       const buttonRect = noBtn.getBoundingClientRect();
-      const bodyRect = document.body.getBoundingClientRect();
 
-      const maxX = bodyRect.width - buttonRect.width;
-      const maxY = bodyRect.height - buttonRect.height;
+      const maxX = window.innerWidth - buttonRect.width;
+      const maxY = window.innerHeight - buttonRect.height;
 
       const randomX = Math.random() * maxX;
       const randomY = Math.random() * maxY;
 
-      noBtn.style.position = 'absolute';
+      noBtn.style.position = 'fixed';
       noBtn.style.left = `${randomX}px`;
       noBtn.style.top = `${randomY}px`;
     }
