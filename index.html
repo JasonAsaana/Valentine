@@ -34,7 +34,7 @@
 
     .gallery {
       margin: 25px auto;
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 15px;
       width: 90%;
@@ -156,6 +156,7 @@
     const noBtn = document.getElementById("noBtn");
     const yesBtn = document.getElementById("yesBtn");
     const message = document.getElementById("message");
+    const gallery = document.querySelector(".gallery");
 
 
     noBtn.addEventListener("click", moveButton);
@@ -178,6 +179,7 @@
 
 
     yesBtn.addEventListener("click", () => {
+      gallery.style.display = "flex";
       message.style.display = "block";
       yesBtn.style.display = "none";
       noBtn.style.display = "none";
